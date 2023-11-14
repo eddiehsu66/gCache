@@ -2,14 +2,13 @@ package core
 
 import (
 	"fmt"
-	"gCache"
 	"log"
 	"reflect"
 	"testing"
 )
 
 func TestGetter(t *testing.T) {
-	var f main.main.Getter = main.main.GetterFunc(func(key string) ([]byte, error) {
+	var f Getter = GetterFunc(func(key string) ([]byte, error) {
 		return []byte(key), nil
 	})
 
